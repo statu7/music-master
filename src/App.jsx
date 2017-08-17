@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
 import Profile from  './Profile';
+import Gallery from './Gallery';
 
 class App extends Component {
 
@@ -23,7 +24,7 @@ class App extends Component {
     const BASE_URL = 'https://api.spotify.com/v1/search?';
     let fetchUrl = `${BASE_URL}q=${this.state.query}&type=Artist&limit=1`;
     const ALBUM_URL ='https://api.spotify.com/v1/artists/';
-    const API_TOCKEN = 'BQDyipeTx2Vcg0JQB9GunsDdN6l37z50eacEYFrJvGB5SVaeYtO5OchHevyAiSV0lXkdk4dbT4FptMK0xPBKYdkdGIy7-fqTg1JYnIdklZ9dc1faf2mGyLPixJmn6JivQ3MXCISlnth0T1BZeurk9T005RMIcw';
+    const API_TOCKEN = 'BQCUm7YUMc5nM1lccNBBp3IGKMdsYWxeB2m21jr3KiqI6OlJslGPq6OLJISxBujOphTWVBvLa-pcIBUCJjG1uWOj0POa5MG6gzhjVeAAdVhBmNnUi4rNG97v0Lr-LTe03IgroGpABak8hIOiLmdtt70w6aH84w';
     let artistId = '';
 
     var mySpotifyOptions = {
@@ -92,9 +93,11 @@ class App extends Component {
 	    <Profile
 	      artist={this.state.artist}
 	    />
-	    <div className="Gallery">
-	      Gallery
-	    </div>
+	    <Gallery
+	    tracks={this.state.tracks}
+	    />
+	    
+	    
 	  </div>
 	  : <div></div>
 	}
