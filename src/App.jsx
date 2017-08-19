@@ -24,7 +24,7 @@ class App extends Component {
     const BASE_URL = 'https://api.spotify.com/v1/search?';
     let fetchUrl = `${BASE_URL}q=${this.state.query}&type=Artist&limit=1`;
     const ALBUM_URL ='https://api.spotify.com/v1/artists/';
-    const API_TOCKEN = 'BQCUm7YUMc5nM1lccNBBp3IGKMdsYWxeB2m21jr3KiqI6OlJslGPq6OLJISxBujOphTWVBvLa-pcIBUCJjG1uWOj0POa5MG6gzhjVeAAdVhBmNnUi4rNG97v0Lr-LTe03IgroGpABak8hIOiLmdtt70w6aH84w';
+    const API_TOCKEN = 'BQD8v-9OOJo-23yX2UFkdZ97ZgDh0sIezk77Vs7ipb5wuNMGu7HRDT0EeGl0XVn8hwB4RiEk39twQXp1TBsHLcEquLQxRX9s9WLeftFu-tHcL1PxVfpZtV-cqxRsmfzNCw0-D0gauuUNvO3CJT0mNDWo3QxWxw';
     let artistId = '';
 
     var mySpotifyOptions = {
